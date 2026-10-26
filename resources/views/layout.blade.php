@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>CATALOGUE DE PARFUM</title>
+    @stack('styles')
     <style>
 
         /* Base Reset */
