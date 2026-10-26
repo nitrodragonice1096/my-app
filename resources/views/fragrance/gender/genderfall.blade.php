@@ -3,8 +3,7 @@
     @vite(['resources/css/genderfalldesign.css'])
 @endpush
 @section('content')
-    <!-- Linking your NEW dedicated CSS file -->
-    <link rel="stylesheet" href="{{ asset('CSS/genderfalldesign.css') }}">
+  
     <div class="back-container">
 
         <a href="{{ route('season') }}">

@@ -5,8 +5,6 @@
     @vite(['resources/css/genderwinterdesign.css'])
 @endpush
 @section('content')
-    <!-- Linking your NEW dedicated CSS file -->
-    <link rel="stylesheet" href="{{ asset('CSS/genderwinterdesign.css') }}">
     <div class="back-container">
         <a href="{{ route('season') }}">
             <button class="btn-back">

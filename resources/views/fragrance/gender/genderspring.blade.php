@@ -5,8 +5,7 @@
     @vite(['resources/css/genderspringdesign.css'])
 @endpush
 @section('content')
-    <!-- Linking your NEW dedicated CSS file -->
-    <link rel="stylesheet" href="{{ asset('CSS/genderspringdesign.css') }}">
+
     <div class="back-container">
         <a href="{{ route('season') }}">
             <button class="btn-back">
