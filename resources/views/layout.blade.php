@@ -4,7 +4,7 @@
     <title>CATALOGUE DE PARFUM</title>
     @stack('styles')
     <style>
-
+        @yield('content')
         /* Base Reset */
         body { margin: 0; font-family: Times New Roman; }
 
