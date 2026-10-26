@@ -16,5 +16,8 @@ COPY . .
 # Install PHP packages
 RUN composer install --no-dev --optimize-autoloader
 
-# Expose port and start Laravel
-CMD php artisan serve --host 0.0.0.0 --port $PORT
+# Create empty SQLite database file and give full read/write permissions
+RUN touch database/database.sqlite && chmod -R 777 database
+
+# Run database migrations and start server
+CMD php artisan migrate --force && php artisan serve --host 0.0.0.0 --port $PORT
