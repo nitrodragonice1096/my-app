@@ -4,7 +4,6 @@
     <title>CATALOGUE DE PARFUM</title>
     @stack('styles')
     <style>
-        @yield('content')
         /* Base Reset */
         body { margin: 0; font-family: Times New Roman; }
 
@@ -237,7 +236,7 @@
     @stack('styles')
 </head>
 <body>
-
+@yield('content')
 <nav>
     <!-- logo -->
     <div class="nav-left">
