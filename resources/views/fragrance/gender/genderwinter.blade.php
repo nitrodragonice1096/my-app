@@ -1,5 +1,9 @@
 @extends('layout')
+@extends('layout')
 
+@push('styles')
+    @vite(['resources/css/genderwinterdesign.css'])
+@endpush
 @section('content')
     <!-- Linking your NEW dedicated CSS file -->
     <link rel="stylesheet" href="{{ asset('CSS/genderwinterdesign.css') }}">
