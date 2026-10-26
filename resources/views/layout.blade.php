@@ -9,17 +9,17 @@
         body { margin: 0; font-family: Times New Roman; }
 
         nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(242, 234, 223, 0.92);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 20px 40px;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            nav {
+                position: sticky;
+                top: 0;
+                z-index: 9999; /* Increase z-index so it sits above the hero layer */
+                background: rgba(242, 234, 223, 0.95);
+                padding: 20px 40px;
+                border-bottom: 1px solid #eee;
+                display: flex;
+                align-items: center;
+                justify-between: space-between;
+            }
         }
 
 
