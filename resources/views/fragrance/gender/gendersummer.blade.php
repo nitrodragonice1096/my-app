@@ -1,5 +1,5 @@
 @extends('layout')
-@extends('layout')
+
 
 @push('styles')
     @vite(['resources/css/gendersummerdesign.css'])
