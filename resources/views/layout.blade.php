@@ -1,51 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CATALOGUE DE PARFUM</title>
+
     @stack('styles')
+
     <style>
         /* Base Reset */
-        body { margin: 0; font-family: Times New Roman; }
-
-        nav {
-            nav {
-                position: sticky;
-                top: 0;
-                z-index: 9999; /* Increase z-index so it sits above the hero layer */
-                background: rgba(242, 234, 223, 0.95);
-                padding: 20px 40px;
-                border-bottom: 1px solid #eee;
-                display: flex;
-                align-items: center;
-                justify-between: space-between;
-            }
+        body {
+            margin: 0;
+            font-family: "Times New Roman", Times, serif;
         }
 
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            background: rgba(242, 234, 223, 0.95);
+            padding: 20px 40px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-        /* Update these to be exactly equal */
         .nav-left, .nav-right {
-            flex: 1; /* Both sides get 1 part */
+            flex: 1;
             display: flex;
             align-items: center;
         }
 
         .nav-middle {
-            flex: 1; /* Give the middle 1 part as well to keep it 1:1:1 */
+            flex: 1;
             display: flex;
             justify-content: center;
+            position: relative;
         }
-
-        /* Ensure the container doesn't have a fixed width or weird padding */
-        /* Find the .container class in your layout blade and update it */
-        /* Replace the .container block in your layout with this */
 
         .nav-right {
-
             justify-content: flex-end;
-
             gap: 30px;
-
         }
+
         .logo {
             color: #555;
             text-decoration: none;
@@ -77,7 +75,7 @@
         }
 
         .logo:focus {
-            outline:none;
+            outline: none;
         }
 
         nav a {
@@ -102,7 +100,7 @@
         .search-bar {
             text-align: center;
             width: 250px;
-            padding: 10px 10px 10px 10px;
+            padding: 10px;
             border-radius: 50px;
             border: 1px solid #ddd;
             outline: none;
@@ -143,15 +141,6 @@
             background-color: transparent;
             color: #bfa37e !important;
             border-color: #bfa37e;
-        }
-
-        .logo:hover,
-        .logo:focus {
-
-        }
-
-        .nav-middle {
-            position: relative;
         }
 
         .search-results {
@@ -203,16 +192,14 @@
             text-transform: uppercase;
         }
 
-
-
-        .container{
-            max-width: none!important;
+        .container {
+            max-width: none !important;
         }
-        /* 1. Define the Keyframes */
+
         @keyframes pageFadeIn {
             from {
                 opacity: 0;
-                transform: translateY(10px); /* Optional: adds a slight upward slide */
+                transform: translateY(10px);
             }
             to {
                 opacity: 1;
@@ -220,30 +207,24 @@
             }
         }
 
-        /* 2. Apply it to your main page containers */
         .summer,
         .spring,
         .fall,
         .winter {
-            /* 0.6s duration, 'ease-out' for smoothness, 'forwards' to stay visible */
             animation: pageFadeIn 0.6s ease-out forwards;
-
-            /* Ensures the page starts invisible before the animation begins */
             opacity: 0;
         }
     </style>
-
-    @stack('styles')
 </head>
 <body>
-@yield('content')
+
 <nav>
     <!-- logo -->
     <div class="nav-left">
         <a href="{{ route('main') }}" class="logo {{ request()->is('main') ? 'active' : '' }}">Catalogue de Parfum</a>
     </div>
 
-    <!-- search bararar -->
+    <!-- search bar -->
     <div class="nav-middle">
         <input type="text" id="searchBar" placeholder="Looking for a particular fragrance?" class="search-bar" autocomplete="off">
         <div id="searchResults" class="search-results" hidden></div>
@@ -257,14 +238,16 @@
     </div>
 </nav>
 
-<div class="container-fluid p-0"> @yield('content')
+<div class="container-fluid p-0">
+    @yield('content')
 </div>
 
-<!-- Make sure your CSS is linked in the <head> -->
-@vite(['resources/css/seasons.css',
+@vite([
+    'resources/css/seasons.css',
     'resources/css/FilterBar.css',
     'resources/css/fragrance.css',
     'resources/css/home.css',
-    'resources/js/app.js'])
+    'resources/js/app.js'
+])
 </body>
 </html>
