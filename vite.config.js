@@ -6,13 +6,12 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/app.css',
                 'resources/css/home.css',
                 'resources/css/FilterBar.css',
                 'resources/css/fragrance.css',
-                'resources/js/app.js', 'resources/css/seasons.css'
+                'resources/js/app.js',
+                'resources/css/seasons.css'
             ],
-            
             refresh: true,
         }),
         tailwindcss(),

@@ -13,12 +13,9 @@
 /* Container adjustment to stop it from hiding under the header */
 .seasons-container {
     max-width: 1600px;
-    margin-top: 60px;
-    /* Adds space at top so it doesn't hide under header */
-    padding: 0 40px;
+    margin: 0 auto;
+    padding: 40px 20px;
     text-align: center;
-    font-family: 'Playfair Display', serif;
-
 }
 
 .page-title {
@@ -40,9 +37,8 @@
 .seasons-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    justify-content: center; /* Centers the grid items horizontally */
-    width: 100%;
+    justify-content: center;
+    gap: 24px;
 }
 
 /* THE CARDS */
